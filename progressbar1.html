@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+        </title>
+        </head>
+        <body>
+            <div id="containa">
+            <div id="qn1">
+              1. What is the capiatal city of Tanzania ??<br>
+               <input type="radio" name="qn">Morogoro <br>
+               <input type="radio" name="qn">Dodoma <br>
+               <input type="radio" name="qn">Arusha<br>
+               <input type="radio" name="qn">Dar-Es-Salaam  <br><br>
+               <button id="btn1">NEXT</button>
+
+            </div>
+
+            <div id="qn2">
+               2. A. what is the product of mass and veocity of a body <input id="inpt"> <br>
+               B. <input id="inpt"> is the product of force and distance in the direction of the force <br>
+               C.  <input id="inpt"> is the rate of ding work <br><br>
+               <button id="btn2a">PREV</button> <button id="btn2b">NEXT</button>
+            </div>
+
+            <div id="qn3">
+               3. What's Nestory's favorite food <br>
+               <input type="radio" name="qna">Wali maharage <br>
+               <input type="radio" name="qna">Chips kuku <br>
+               <input type="radio" name="qna">Makande<br>
+               <input type="radio" name="qna">pizza  <br><br>
+               <button id="btn3a">PREV</button> <button id="btn3b">NEXT</button>
+            </div>
+
+            <div id="qn4">
+               4. What's Tanzania's current president <br>
+               <input type="radio" name="qna">J.K Kikwete <br>
+               <input type="radio" name="qna">Samia Suluhu <br>
+               <input type="radio" name="qna">Dr. J Magufuri<br>
+               <input type="radio" name="qna">Dr Mwinyi  <br><br>
+               <button id="btn4">PREV</button>  <button id="btn4B">restart</button>
+            </div>
+        </div>
+        <br>  
+        <div id="barrr">
+            YOUR PROGRESS:
+        <div id="bar">
+            <div id="inabar"></div>
+        </div>
+    </div>
+        </body>
+        <script>
+
+            btn1.onclick=function(){
+                qnindex=0;
+                qnindex++;
+                qn1.style.display="none"
+                qn2.style.display="inline"
+                inabar.style.width=((qnindex/3)* 100) +"%"
+            }
+
+            btn2a.onclick=function(){
+                qnindex--;
+                qn2.style.display="none" 
+                qn1.style.display="inline" 
+                inabar.style.width=((qnindex/3)* 100) +"%"
+            }
+
+            btn2b.onclick=function(){
+                qnindex++;
+                qn2.style.display="none" 
+                qn3.style.display="inline" 
+                inabar.style.width=((qnindex/3)* 100) +"%"
+            }
+
+            btn3a.onclick=function(){
+                qnindex--;
+                qn3.style.display="none" 
+                qn2.style.display="inline" 
+                inabar.style.width=((qnindex/3)* 100) +"%"
+            }
+
+            btn3b.onclick=function(){
+                qnindex++;
+                qn3.style.display="none" 
+                qn4.style.display="inline" 
+                inabar.style.width=((qnindex/3)* 100) +"%"
+            }
+
+            btn4.onclick=function(){
+                qnindex--;
+                qn4.style.display="none" 
+                qn3.style.display="inline" 
+                inabar.style.width=((qnindex/3)* 100) +"%"
+            }
+
+            btn4B.onclick=function(){location.reload()}
+        </script>
+
+        <style>
+#containa{ border: solid red; width:550px; font-size: x-large; display: flex;align-items:center;justify-content: center;}
+#inpt{width: 4em;}
+#qn2,#qn3,#qn4{display: none;}
+#bar{border-radius: 50px; background-color: rgb(154, 69, 69); width: 200px; height: 20px;}
+#inabar{border-radius: 50px; background-color: blue; width: 0%; height: 20px;}
+#barrr{display: flex;align-items:center;justify-content: center;}
+
+        </style>
+        </html>
